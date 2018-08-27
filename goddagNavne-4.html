@@ -12,8 +12,15 @@
         let forNavn = prompt("Hvad er dit fornavn?");
         let efterNavn = prompt("Hvad er dit efternavn?");
 
-        if (forNavn != null && forNavn != "") {
+        if (forNavn != null && efterNavn != "") {
             alert("Goddag " + forNavn + efterNavn);
+
+        } else if (forNavn != null) {
+            alert("Goddag " + forNavn);
+
+        } else if (efterNavn != "") {
+            alert("Goddag " + efterNavn);
+
         } else {
             alert("Goddag min ven");
         }
