@@ -5,9 +5,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>styleBoxes.html - øvelse i timen</title>
     <link rel="stylesheet" href="">
+    <style>
+        body {
+            color: burlywood;
+        }
+
+        .box {
+            display: inline-block;
+            width: 10vw;
+            height: 10vw;
+            border: 1px solid silver;
+            margin: 7vw;
+            transition: all 1s;
+        }
+
+        /*********************/
+    </style>
+
 </head>
 
 <body>
-    <script src=""></script>
+    <div class="box" id="box1"></div>
+    <div class="box" id="box2"></div>
+    <div class="box" id="box3"></div>
+    <div class="box" id="box4"></div>
+
+    <script>
+        // Box 1
+        const box1 = document.querySelector("#box1");
+        box1.addEventListener("click", skifterFarve);
+
+        function skifterFarve() {
+
+            box1.style.backgroundColor = "#FA8072";
+            box1.style.height = "4rem";
+            box1.style.width = "2rem";
+            box1.style.border = "dotted 5px";
+            box1.style.transition = "all 3s";
+        }
+
+        // Box 2
+        const box2 = document.querySelector("#box2");
+        box2.addEventListener("click", form);
+
+        function form() {
+
+            box2.style.backgroundColor = "#FAECA5";
+            box2.style.transition = "all 5s";
+            box2.style.borderRadius = "6rem";
+            box2.style.border = "none";
+        }
+
+        // Box 3
+        const box3 = document.querySelector("#box3");
+        box3.addEventListener("click", rød);
+
+        function rød() {
+
+            box3.style.backgroundColor = "red";
+            box3.style.transition = "all 7s";
+            box3.style.borderColor = "blue";
+            box3.style.borderWidth = "thick";
+            box3.style.width = "1rem";
+        }
+
+        // Box 4
+        const box4 = document.querySelector("#box4");
+        box4.addEventListener("click", grøn);
+
+        function grøn() {
+
+            box4.style.backgroundColor = "green";
+            box4.style.transition = "all 0.5s";
+            box4.style.borderColor = "none";
+            box4.style.height = "0.5rem";
+            box4.style.borderRadius = "10rem";
+        }
+    </script>
 </body>
+
 </html>
