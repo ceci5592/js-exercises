@@ -10,11 +10,29 @@
 <body>
 
     <script>
-        let længde = prompt("Angiv venligst en længde:");
-        let bredde = prompt("Tak, angiv venligst en bredde:");
-        let areal = prompt(længde * bredde);
+        // Angivelse af variabler
+        let længde = prompt("Angiv venligst en længde:"),
+            bredde = prompt("Tak, angiv venligst en bredde:"),
+            besked;
 
-        const resultat = prompt("Længde: " + længde);
+        // Hvis både længde og bredde er tal
+        if (Number(bredde) && Number(længde)) {
+
+            // Udskriv arealet til brugeren
+            alert("Længde: " +
+                længde + " meter\nBredden: " + bredde + " \meter \nArealet: " + længde * bredde + " kvadratmeter");
+        }
+
+        // Ellers
+        else {
+            // Udskriv fejlmelding
+            alert("Kan ikke regne det ud");
+        }
+        // Hvis brugeren vil starte forfra
+        if (confirm("Vil du starte forfra?")) {
+            // Start forfra
+            location.reload();
+        }
     </script>
 
 </body>
