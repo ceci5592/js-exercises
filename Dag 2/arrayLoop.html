@@ -7,12 +7,12 @@
     <title>js-oevelse-1</title>
     <style>
         body {
-            color: burlywood;
+            color: darkcyan;
         }
 
         #display {
-            width: 20vw;
-            height: 20vw;
+            width: 11.5vw;
+            height: 10vw;
             border: 1px solid silver;
             margin: 7vw;
             padding: 1vw;
@@ -27,6 +27,11 @@
     <div id="display"></div>
 
     <script>
+        let myTracks = ["Youngblood", "Strapped", "Be Alright", "Summertime Magic", "Vampires", "IDGAF", "Big For Your Boots"];
+        myTracks.forEach(track => {
+            console.log(track);
+            display.innerHTML += track + " ;-) <br>";
+        });
     </script>
 </body>
 
