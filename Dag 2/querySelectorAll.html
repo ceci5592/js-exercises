@@ -8,7 +8,7 @@
     <style>
         .typo {
             font-family: monospace;
-            color: darkblue;
+            color: plum;
             line-height: 150%;
         }
     </style>
@@ -16,6 +16,7 @@
 </head>
 
 <body>
+    <button id="myBut">DELETE ALL</button>
     <h3>En</h3>
     <p>Gochujang blue bottle iPhone quinoa, umami lumbersexual semiotics disrupt coloring book squid. Tilde banjo flannel PBR&B umami vape plaid occupy prism lumbersexual man braid. </p>
     <h3>Lille</h3>
@@ -29,6 +30,20 @@
 
 
     <script>
+        const p = document.querySelectorAll("p").forEach(c => {
+            c.addEventListener("click", () => {
+
+                c.classList.add("typo");
+            })
+        })
+
+        document.querySelector("#myBut").addEventListener("click", fjernFarve);
+
+        function fjernFarve() {
+            document.querySelectorAll(".typo").forEach(c => {
+                c.style.display = "none";
+            })
+        }
     </script>
 </body>
 
