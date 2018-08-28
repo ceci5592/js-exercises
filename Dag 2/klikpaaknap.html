@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>klikpaaknap.html - øvelse i timen</title>
+    <link rel="stylesheet" href="">
+
+    <style>
+        #box,
+        #bax {
+            width: 200px;
+            height: 200px;
+            background-color: wheat;
+            padding: 20px;
+            margin: 10px;
+        }
+
+        button {
+            font-size: 2rem;
+            margin: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <button id="klik">
+        klik
+    </button>
+    <button id="slet">
+        slet
+    </button>
+    <button id="html">
+        html
+    </button>
+    <button id="flyt">
+        flyt
+    </button>
+    <div id="box"></div>
+    <div id="bax"></div>
+
+    <script>
+        // Box viser tekst "KLIK"
+        const klik = document.querySelector("#klik");
+        klik.addEventListener("click", doSomething);
+
+        function doSomething() {
+            box.textContent = "KLIK";
+        }
+
+        // Box resettes og "KLIK" fjernes
+        const slet = document.querySelector("#slet");
+        slet.addEventListener("click", reset);
+
+        function reset() {
+            box.textContent = "";
+        }
+
+        // Tilføjelse af <h2> og <p> ved tryk på HTML-knap
+        const html = document.querySelector("#html");
+        html.addEventListener("click", add);
+
+        function add() {
+            box.innerHTML = "<h2>HALLO</h3>\n <p>Is it me you're looking for?</p>";
+        }
+
+        // Flytning af <h2> og <p> ved tryk på flyt-knap til nederste kasse
+        const flyt = document.querySelector("#flyt");
+        flyt.addEventListener("click", change);
+
+        function change() {
+            box.innerHTML = "";
+            bax.innerHTML = "<h2>HALLO</h3>\n <p>Is it me you're looking for?</p>";
+        }
+    </script>
+</body>
+
+</html>
+
