@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Øvelse i timen</title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+
+    <div class="liste"></div>
+
+    <script>
+        let dyr = [{
+                "billede": "elefant.jpg",
+                "navn": "Elefant",
+                "type": "pattedyr",
+                "levested": "Indien"
+            },
+
+            {
+                "billede": "sild.jpg",
+                "navn": "Sild",
+                "type": "fisk",
+                "levested": "Nordsøen"
+            },
+
+            {
+                "billede": "krokodille.jpg",
+                "navn": "Krokodille",
+                "type": "reptil",
+                "levested": "Afrika"
+            },
+
+        ];
+
+        document.addEventListener("DOMContentLoaded", start);
+
+        let dest = document.querySelector(".liste");
+
+        function start() {
+            dyr.forEach(dyr => {
+                dest.innerHTML += "<img src='" + dyr.billede + "' alt=''> " + dyr.navn + ": " + dyr.type + " fra " + dyr.levested + "<br>";
+            });
+
+        };
+    </script>
+</body>
+
+</html>
